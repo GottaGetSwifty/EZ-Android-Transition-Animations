@@ -1,4 +1,4 @@
-package com.peejweej.eztransition
+package com.peejweej.ezandroidtransitionanimations
 
 import android.app.Activity
 import android.content.Intent
@@ -9,25 +9,25 @@ enum class TransitionAnimationOption {
     VERTICAL, HORIZONTAL, CROSS_FADE;
     
     val startEnterAnimation get() = when(this) {
-        VERTICAL -> R.anim.enter_from_bottom
+        VERTICAL   -> R.anim.enter_from_bottom
         HORIZONTAL -> R.anim.enter_from_right
         CROSS_FADE -> R.anim.enter_center
     }
     
     val startExitAnimation get() = when(this) {
-        VERTICAL -> R.anim.enter_center
+        VERTICAL   -> R.anim.enter_center
         HORIZONTAL -> R.anim.enter_center
         CROSS_FADE -> R.anim.exit_fade
     }
     
     val finishEnterAnimation get() = when(this) {
-        VERTICAL -> R.anim.enter_center
+        VERTICAL   -> R.anim.enter_center
         HORIZONTAL -> R.anim.enter_center
         CROSS_FADE -> R.anim.enter_center
     }
     
     val finishExitAnimation get() = when(this) {
-        VERTICAL -> R.anim.exit_on_bottom
+        VERTICAL   -> R.anim.exit_on_bottom
         HORIZONTAL -> R.anim.exit_on_right
         CROSS_FADE -> R.anim.exit_fade
     }
